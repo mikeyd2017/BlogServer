@@ -5,6 +5,15 @@ const USER = mongoUtil.MONGOOSE.model('User', {
     age: { type: Number }
 });
 
+const BLOG = mongoUtil.MONGOOSE.model('Blog', {
+    owner: { type: String },
+    title: { type: String },
+    content: { type: String },
+    datePosted: { type: Date },
+    dateEdited: { type: Date }
+});
+
 module.exports = {
-    USER
+    USER,
+    BLOG
 };

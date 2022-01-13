@@ -7,5 +7,5 @@ router.get('/blogs/:id', function(req, res) {
         if (err) { throw(err); }
             return res.render('blog', {title: post.title, url: post.URL
         });
-    })
+    });
 });

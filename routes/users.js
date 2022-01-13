@@ -19,4 +19,14 @@ router.get('/createuser', function(req, res, next) {
   });
 });
 
+router.get('/:id', function(req, res) {
+  return schemas.USER.findById(req.params.id, function(err, user) {
+    if (err) {
+        res.status(500).json({ message: err});
+    } else {
+        res.status(200).json({ message: user});
+    }
+  });
+});
+
 module.exports = router;
