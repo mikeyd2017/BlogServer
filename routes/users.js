@@ -4,8 +4,9 @@ var schemas = require('../Mongoose/Schemas');
 
 router.get('/createuser', function(req, res, next) {
   var new_user = new schemas.USER({
-    name: 'Manish',
-    age: 34
+    name: 'Michael',
+    age: 23,
+    email: 'dambrosiomichael@rocketmail.com'
   });
 
   new_user.save(function(err, result) {

@@ -1,0 +1,9 @@
+@import 'variables.scss';
+
+.sidebar {
+    width: 195px;
+    background-color: $pale-silver;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

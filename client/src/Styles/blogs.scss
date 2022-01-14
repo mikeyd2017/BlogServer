@@ -1,0 +1,39 @@
+@import 'variables.scss';
+
+.blogs {
+    margin: 10%;
+    margin-top: 10%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background-color: $white;
+    width: 100%;
+    height: 85%;
+    border-radius: 12px;
+    align-items: center;
+
+    .top {
+        height: 90%;
+        width: 100%;
+        display: flex;
+    }
+
+    .bottom {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .add-blog {
+            font-size: 48px;
+            display: block;
+            color: $jet;
+            cursor: pointer;
+        }
+    }
+
+    .modal {
+        height: 500px;
+        width: 300px;
+        background-color: $light-gray;
+    }
+}

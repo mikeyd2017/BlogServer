@@ -2,7 +2,8 @@ var mongoUtil = require('../utilities/mongoUtil');
 
 const USER = mongoUtil.MONGOOSE.model('User', {
     name: { type: String },
-    age: { type: Number }
+    age: { type: Number },
+    email: { type: String }
 });
 
 const BLOG = mongoUtil.MONGOOSE.model('Blog', {
