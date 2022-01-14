@@ -1,3 +1,3 @@
 export const devKeys = {
-    devAPI: 'localhost:3001'
+    devAPI: 'http://localhost:3001'
 }

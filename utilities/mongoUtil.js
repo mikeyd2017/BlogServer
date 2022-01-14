@@ -18,7 +18,7 @@
 // }
 const MONGOOSE = require('mongoose');
 
-MONGOOSE.connect('mongodb+srv://admin:blogadmin@cluster0.cdk4d.mongodb.net/main?retryWrites=true&w=majority', {
+MONGOOSE.connect('mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
