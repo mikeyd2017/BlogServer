@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var schemas = require('../Mongoose/Schemas');
 
-router.get('/createuser', function(req, res, next) {
+router.get('/create', function(req, res, next) {
   var new_user = new schemas.USER({
     name: req.user.name,
     age: req.user.age,

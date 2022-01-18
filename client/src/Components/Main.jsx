@@ -8,7 +8,7 @@ function Main(props) {
 
     return (
         <div className='main'>
-            <Blogs></Blogs>
+            <Blogs name={props.name}></Blogs>
         </div>
     )
 }

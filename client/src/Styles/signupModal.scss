@@ -8,6 +8,7 @@
     height: 100vh;
     width: 100vw;
     backdrop-filter: blur(5px);
+    z-index: 1;
 
     .modal {
         justify-content: center;
@@ -22,14 +23,16 @@
             text-align: center;
         }
 
-        form {
+        .form {
             width: 100%;
-            display: flex;
+            margin-top: 15px;
             justify-content: center;
         }
 
         .textbox {
-            flex-basis: 100%;
+            display: flex;
+            margin: 6.5px auto;
+            width: 85%
         }
     }
 }
