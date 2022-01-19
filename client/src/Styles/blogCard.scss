@@ -1,9 +1,17 @@
+@import './variables.scss';
+
 .blog-card {
     display: flex;
-    flex-basis: 25%;
-    height: auto;
+    height: 200px;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
+    margin: 2.5px;
+    padding: 10px;
+    text-align: center;
+    background-color: $light-gray;
+    border-radius: 8px;
+    justify-self: center;
 
     .info {
         .owner {}

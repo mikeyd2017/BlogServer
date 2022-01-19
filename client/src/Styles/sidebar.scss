@@ -3,4 +3,22 @@
 .sidebar {
     width: 195px;
     background-color: $pale-silver;
+
+    .user-info {
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        box-shadow: rgba(10 37 64 / 35%) 0px 0px 8px -1px inset;
+        border-radius: 10px;
+        font-family: 'Dongle';
+        font-size: 28px;
+        line-height: 28px;
+
+        img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
 }

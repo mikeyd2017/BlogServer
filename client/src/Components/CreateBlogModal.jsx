@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { TextField } from '@mui/material';
+import { TextField, Button } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import BLOG from '../utilities/Blog';
 import $ from 'jquery';
@@ -51,9 +51,10 @@ function CreateBlogModal(props) {
                 <div className='form'>
                     <form>
                         <TextField className='textbox title' onChange={(e) => setTitle(e.target.value)} label='Title' variant='standard'></TextField>
-                        <TextField className='textbox content' onChange={(e) => setContent(e.target.value)} abel='Content' variant='outlined' multiline={true} minRows={'18'}></TextField>
+                        <TextField className='textbox content' onChange={(e) => setContent(e.target.value)} label='Content' variant='outlined' multiline={true} minRows={'8'}></TextField>
                         <div className='btn-container'>
-                            <LoadingButton className='save-btn' loading={isSaving} variant='outlined' onClick={() => submitBlog()}>Submit</LoadingButton>
+                            <Button className='cancel-btn' onClick={() => props.setShowModal(false)} variant='contained'>Cancel</Button>
+                            <LoadingButton className='save-btn' loading={isSaving} variant='contained' onClick={() => submitBlog()}>Submit</LoadingButton>
                         </div>
                     </form>
                 </div>

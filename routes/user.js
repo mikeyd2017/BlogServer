@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 var schemas = require('../Mongoose/Schemas');
 
-router.get('/create', function(req, res, next) {
+router.post('/create', function(req, res, next) {
   var new_user = new schemas.USER({
-    name: req.user.name,
-    age: req.user.age,
-    email: req.user.email
+    name: req.body.user.name,
+    age: req.body.user.age,
+    email: req.body.user.email
   });
 
   new_user.save(function(err, user) {
