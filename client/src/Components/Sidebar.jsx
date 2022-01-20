@@ -12,7 +12,7 @@ function Sidebar(props) {
             {showSignup && <SignupModal></SignupModal>}
             <div className='sidebar'>
                 <div className='user-info'>
-                    <img src="https://via.placeholder.com/200x200" class="user" />
+                    <img src="https://via.placeholder.com/200x200" />
                     <p>{props.user.name}</p>
                 </div>
                 {/* <Button onClick={() => setShowSignup(!showSignup)}>Sign Up</Button> */}
