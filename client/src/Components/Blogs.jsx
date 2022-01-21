@@ -37,7 +37,9 @@ function Blogs(props) {
         <div className='blogs'>
             {showModal && <CreateBlogModal getBlogs={getBlogs} setShowModal={setShowModal} name={props.name}></CreateBlogModal>}
             <div className='top'>
-                {displayBlogs()}
+                <div className='blog-cards'>
+                    {displayBlogs()}
+                </div>
             </div>
             <div className='bottom'>
                 <FaPlusSquare className='add-blog' onClick={() => setShowModal(!showModal)}></FaPlusSquare>

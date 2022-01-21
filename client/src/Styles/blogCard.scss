@@ -3,12 +3,11 @@
 .blog-card {
     display: flex;
     position: relative;
-    min-height: 200px;
-    width: 96%;
+    height: 200px;
+    width: 100%;
     overflow: hidden;
     flex-direction: column;
     align-items: center;
-    margin: 4px;
     padding: 10px;
     text-align: center;
     background-color: $light-gray;
