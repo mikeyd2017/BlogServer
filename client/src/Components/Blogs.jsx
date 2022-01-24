@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import CreateBlogModal from './CreateBlogModal.jsx';
 import BlogCard from './BlogCard.jsx';
-import { FaPlusSquare } from 'react-icons/fa';
+import { FaPlusSquare, FaThList, FaTh } from 'react-icons/fa';
+
 import BLOG from '../utilities/Blog';
 
 import '../Styles/blogs.scss';
@@ -42,7 +43,20 @@ function Blogs(props) {
                 </div>
             </div>
             <div className='bottom'>
-                <FaPlusSquare className='add-blog' onClick={() => setShowModal(!showModal)}></FaPlusSquare>
+                <div className='icons-left'>
+                    <div className='list-view'>
+                        <FaThList></FaThList>
+                    </div>
+                    <div className='card-view'>
+                        <FaTh></FaTh>
+                    </div>
+                </div>
+                <div className='icons-middle'>
+                    <FaPlusSquare className='add-blog' onClick={() => setShowModal(!showModal)}></FaPlusSquare>
+                </div>
+                <div className='icons-right'>
+
+                </div>
             </div>
         </div>
     )

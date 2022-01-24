@@ -3,14 +3,13 @@
 .blogs {
     box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     background-color: $white;
-    width: 98%;
-    height: 98%;
-    border-radius: 12px;
+    border-radius: 6px;
     align-items: center;
     position: relative;
+    margin: 2.5px 0px;
 
     .top {
-        height: 90%;
+        height: 94%;
         width: 100%;
         overflow: scroll;
 
@@ -31,21 +30,68 @@
     }
 
     .bottom {
-        height: 10%;
+        height: 6%;
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        box-shadow: rgba(0 0 0 / 35%) 0px -10px 20px -14px;
+        box-shadow: rgba(0 0 0 / 15%) 0px -3px 11px -2px;
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
         position: relative;
 
-        .add-blog {
-            font-size: 33px;
-            display: block;
+        svg {
             color: $jet;
-            cursor: pointer;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+
+        .icons-left {
+            flex-basis: 45%;
+            padding-left: 14px;
+
+            div {
+                padding: 5px;
+                padding-top: 7.5px;
+                padding-bottom: 7.5px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                margin-right: 2.5px;
+
+                &:hover {
+                    background-color: $light-gray;
+                    box-shadow: rgb(50 50 93 / 25%) 0px 0px 4px 1px inset;
+                }
+            }
+
+            svg {
+                margin: 0px 2.5px;
+                font-size: 22px;
+            }
+
+            .list-view {}
+
+            .card-view {}
+        }
+
+        .icons-middle {
+            flex-basis: 10%;
+            justify-content: center;
+
+            .add-blog {
+                font-size: 33px;
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        .icons-right {
+            flex-basis: 45%;
+            justify-content: center;
         }
     }
 }

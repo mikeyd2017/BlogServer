@@ -1,9 +1,16 @@
 @import 'variables.scss';
 
-.main {
-    width: calc(100% - 195px);
-    background-color: $light-gray;
+.main-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    background-color: $light-gray;
+
+    .main {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        max-width: 1080px;
+    }
 }
