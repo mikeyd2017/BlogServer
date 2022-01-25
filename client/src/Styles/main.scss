@@ -11,6 +11,10 @@
         display: flex;
         justify-content: center;
         height: 100%;
-        max-width: 1080px;
+
+        @media screen and (min-width: '769px') {
+            max-width: 1080px;
+            max-height: 1100px;
+        }
     }
 }

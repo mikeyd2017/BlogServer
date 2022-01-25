@@ -3,13 +3,16 @@
 .blogs {
     box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     background-color: $white;
-    border-radius: 6px;
     align-items: center;
     position: relative;
-    margin: 2.5px 0px;
+
+    @media screen and (min-width: '769px') {
+        margin: 2.5px 0px;
+        border-radius: 6px;
+    }
 
     .top {
-        height: 94%;
+        height: calc(100% - 50px);
         width: 100%;
         overflow: scroll;
 
@@ -30,7 +33,7 @@
     }
 
     .bottom {
-        height: 6%;
+        height: 50px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -46,6 +49,7 @@
         div {
             display: flex;
             align-items: center;
+            margin-top: -1.5px;
         }
 
         .icons-left {
@@ -53,12 +57,10 @@
             padding-left: 14px;
 
             div {
-                padding: 5px;
+                padding: 6.5px;
                 padding-top: 7.5px;
                 padding-bottom: 7.5px;
                 border-radius: 4px;
-                display: flex;
-                align-items: center;
                 cursor: pointer;
                 margin-right: 2.5px;
 

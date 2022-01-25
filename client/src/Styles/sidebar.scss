@@ -2,11 +2,17 @@
 
 .sidebar {
     background-color: $pale-silver;
-    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     height: 60%;
     border-radius: 6px;
     margin: 0px 10px;
-    margin-top: 5%;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: '768px') {
+        display: none;
+    }
 
     .user-info {
         text-align: center;
@@ -17,12 +23,38 @@
         font-family: 'Dongle';
         font-size: 28px;
         line-height: 28px;
+        color: $jet;
 
         img {
             width: 65px;
             height: 65px;
             border-radius: 50%;
             object-fit: cover;
+        }
+    }
+
+    .middle {
+        flex-basis: 85%;
+    }
+
+    .bottom {
+        display: flex;
+        flex-basis: 15%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        svg {
+            font-size: 32px;
+            color: $jet;
+            margin-right: -2px;
+        }
+
+        span {
+            font-family: 'Dongle';
+            font-size: 24px;
+            color: $jet;
+            text-transform: uppercase;
         }
     }
 }
