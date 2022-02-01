@@ -6,15 +6,19 @@
     align-items: center;
     position: relative;
 
-    @media screen and (min-width: '769px') {
+    @media screen and (min-width: 769px) {
         margin: 2.5px 0px;
         border-radius: 6px;
     }
 
     .top {
-        height: calc(100% - 50px);
+        height: calc(100% - 85px);
         width: 100%;
         overflow: scroll;
+
+        @media screen and (min-width: 769px) {
+            height: calc(100% - 50px);
+        }
 
         &::-webkit-scrollbar {
             width: 0px;
@@ -52,10 +56,8 @@
             margin-top: -1.5px;
         }
 
-        .icons-left {
-            flex-basis: 45%;
-            padding-left: 14px;
-
+        .icons-left,
+        .icons-right {
             div {
                 padding: 6.5px;
                 padding-top: 7.5px;
@@ -70,14 +72,33 @@
                 }
             }
 
+            span {
+                display: none;
+
+                @media screen and (min-width: 550px) {
+                    font-family: 'Rubik';
+                    font-size: 12px;
+                    line-height: 12px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin-top: 2px;
+                    display: inline-block;
+                }
+            }
+
             svg {
                 margin: 0px 2.5px;
                 font-size: 22px;
             }
+        }
 
-            .list-view {}
+        .icons-left {
+            flex-basis: 45%;
+            padding-left: 14px;
 
-            .card-view {}
+            span {
+                margin-left: 3px;
+            }
         }
 
         .icons-middle {
@@ -93,7 +114,12 @@
 
         .icons-right {
             flex-basis: 45%;
-            justify-content: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+
+            span {
+                margin-right: 3px;
+            }
         }
     }
 }

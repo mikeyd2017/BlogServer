@@ -5,7 +5,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: calc(100% - 85px);
+
+    @media screen and (min-width: 769px) {
+        height: calc(100% - 50px);
+    }
+
     width: 100%;
 
     .background {

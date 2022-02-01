@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import CreateBlogModal from './CreateBlogModal.jsx';
+import MobileMenu from './MobileMenu.jsx';
 import BlogCard from './BlogCard.jsx';
-import { FaPlusSquare, FaThList, FaTh } from 'react-icons/fa';
+import { FaPlusSquare, FaThList, FaTh, FaSearch, FaCog } from 'react-icons/fa';
 
 import BLOG from '../utilities/Blog';
 
@@ -36,6 +37,7 @@ function Blogs(props) {
 
     return (
         <div className='blogs'>
+            <MobileMenu name={props.name}></MobileMenu>
             {showModal && <CreateBlogModal getBlogs={getBlogs} setShowModal={setShowModal} name={props.name}></CreateBlogModal>}
             <div className='top'>
                 <div className='blog-cards'>
@@ -44,18 +46,17 @@ function Blogs(props) {
             </div>
             <div className='bottom'>
                 <div className='icons-left'>
-                    <div className='list-view'>
-                        <FaThList></FaThList>
-                    </div>
-                    <div className='card-view'>
-                        <FaTh></FaTh>
+                    <div className='search-icon'>
+                        <FaSearch></FaSearch><span>Search</span>
                     </div>
                 </div>
                 <div className='icons-middle'>
                     <FaPlusSquare className='add-blog' onClick={() => setShowModal(!showModal)}></FaPlusSquare>
                 </div>
                 <div className='icons-right'>
-
+                    <div className='settings-icon'>
+                        <span>Settings</span><FaCog></FaCog>
+                    </div>
                 </div>
             </div>
         </div>

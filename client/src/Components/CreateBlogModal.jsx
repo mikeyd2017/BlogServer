@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { TextField, Button } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import BLOG from '../utilities/Blog';
-import $ from 'jquery';
 
 import '../Styles/createblogModal.scss';
 
