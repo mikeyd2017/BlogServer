@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { TextField, Button } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import BLOG from '../utilities/Blog';
+import { IoPersonCircleSharp, IoCalendarSharp } from 'react-icons/io5';
 
 import '../Styles/createblogModal.scss';
 
@@ -41,21 +42,24 @@ function CreateBlogModal(props) {
             </div>
             <div className='modal'>
                 <div className='modal-top'>
-                    <div className='user-info'>
-                        <p className='name'>{props.name}</p>
-                        <p className='date'>{currentDate}</p>
-                    </div>
                     <h2>Create Blog</h2>
                 </div>
-                <div className='form'>
-                    <form>
-                        <TextField className='textbox title' onChange={(e) => setTitle(e.target.value)} label='Title' variant='standard'></TextField>
-                        <TextField className='textbox content' onChange={(e) => setContent(e.target.value)} label='Content' variant='outlined' multiline={true} minRows={'8'}></TextField>
-                        <div className='btn-container'>
-                            <Button className='cancel-btn' onClick={() => props.setShowModal(false)} variant='contained'>Cancel</Button>
-                            <LoadingButton className='save-btn' loading={isSaving} variant='contained' onClick={() => submitBlog()}>Submit</LoadingButton>
-                        </div>
-                    </form>
+                <div className='modal-middle'>
+                    <div className='form'>
+                        <form>
+                            <TextField className='textbox title' onChange={(e) => setTitle(e.target.value)} label='Title' variant='standard'></TextField>
+                            <TextField className='textbox content' onChange={(e) => setContent(e.target.value)} label='Content' variant='outlined' multiline={true} minRows={'8'}></TextField>
+                            <div className='btn-container'>
+                                <Button className='cancel-btn' onClick={() => props.setShowModal(false)} variant='contained'>Cancel</Button>
+                                <LoadingButton className='save-btn' loading={isSaving} variant='contained' onClick={() => submitBlog()}>Submit</LoadingButton>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div className='modal-bottom'>
+                    <div className='left-icons'><IoPersonCircleSharp></IoPersonCircleSharp><span>{props.name}</span></div>
+                    <div className='right-icons'><IoCalendarSharp></IoCalendarSharp><span>{currentDate}</span></div>
                 </div>
             </div>
         </div>
