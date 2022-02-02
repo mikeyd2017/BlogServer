@@ -6,8 +6,7 @@
     align-items: center;
     position: relative;
 
-    @media screen and (min-width: 769px) {
-        margin: 2.5px 0px;
+    @media screen and (min-width: 1080px) {
         border-radius: 6px;
     }
 
@@ -15,10 +14,6 @@
         height: calc(100% - 85px);
         width: 100%;
         overflow: scroll;
-
-        @media screen and (min-width: 769px) {
-            height: calc(100% - 50px);
-        }
 
         &::-webkit-scrollbar {
             width: 0px;
@@ -98,6 +93,7 @@
 
             span {
                 margin-left: 3px;
+                padding-right: 6px;
             }
         }
 
@@ -119,6 +115,7 @@
 
             span {
                 margin-right: 3px;
+                padding-left: 7px;
             }
         }
     }

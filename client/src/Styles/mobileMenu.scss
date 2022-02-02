@@ -2,14 +2,10 @@
 
 .mobile-menu {
     display: flex;
-    box-shadow: rgba(0 0 0 / 15%) 0px 0px 11px -2px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 4px 11px -5px;
     height: 35px;
     width: 100%;
     color: $jet;
-
-    @media screen and (min-width: 769px) {
-        display: none;
-    }
 
     .mobile-icons-left {
         display: flex;
@@ -48,7 +44,7 @@
         align-items: center;
         justify-content: flex-end;
         font-size: 24px;
-        margin-right: 12px;
+        margin-right: 8px;
 
         div {
             cursor: pointer;
