@@ -3,6 +3,7 @@ import { TextField, Button } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 import BLOG from '../utilities/Blog';
 import { IoPersonCircleSharp, IoCalendarSharp } from 'react-icons/io5';
+import $ from 'jquery';
 
 import '../Styles/createblogModal.scss';
 
@@ -15,6 +16,15 @@ function CreateBlogModal(props) {
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
+
+    $(function () {
+        let title = document.getElementById('title');
+        if (title) {
+            title.addEventListener("input", function () {
+                setTitle(title.innerText);
+            })
+        }
+    });
 
     const submitBlog = () => {
         setSaving(true);
@@ -42,16 +52,18 @@ function CreateBlogModal(props) {
             </div>
             <div className='modal'>
                 <div className='modal-top'>
-                    <h2>Create Blog</h2>
+                    <h2>Create Post</h2>
                 </div>
                 <div className='modal-middle'>
                     <div className='form'>
                         <form>
-                            <TextField className='textbox title' onChange={(e) => setTitle(e.target.value)} label='Title' variant='standard'></TextField>
-                            <TextField className='textbox content' onChange={(e) => setContent(e.target.value)} label='Content' variant='outlined' multiline={true} minRows={'8'}></TextField>
+                            <div className='label-container'><span className='label'>Title</span></div>
+                            <div className='textbox' id='title' label='Title' contentEditable='true'></div>
+                            <div className='label-container'><span className='label'>Content</span></div>
+                            <textarea className='textbox' id='content' onChange={(e) => setContent(e.target.value)} label='Content'></textarea>
                             <div className='btn-container'>
                                 <Button className='cancel-btn' onClick={() => props.setShowModal(false)} variant='contained'>Cancel</Button>
-                                <LoadingButton className='save-btn' loading={isSaving} variant='contained' onClick={() => submitBlog()}>Submit</LoadingButton>
+                                <LoadingButton className='save-btn' loading={isSaving} variant='contained' onClick={() => submitBlog()}>Done</LoadingButton>
                             </div>
                         </form>
                     </div>

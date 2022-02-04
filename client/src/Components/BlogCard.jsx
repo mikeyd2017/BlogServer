@@ -7,8 +7,6 @@ function BlogCard(props) {
         <div className='blog-card'>
             <div className='card-top'>
                 <h3 className='title'>{props.blog.title}</h3>
-                <div className='info'>
-                </div>
                 <p className='content'>{props.blog.content}</p>
             </div>
             <div className='card-bottom'>

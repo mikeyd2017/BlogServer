@@ -26,18 +26,19 @@
         z-index: 1;
         height: 90%;
         width: 90%;
+        max-height: 450px;
+        max-width: 400px;
         background-color: $light-gray;
         border-radius: 12px;
-        max-width: 635px;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
         h2 {
             font-family: 'Rubik';
             text-align: center;
-            font-size: 24px;
+            font-size: 20px;
             text-transform: uppercase;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         .modal-top {
@@ -49,35 +50,87 @@
 
         .modal-middle {
             flex-grow: 1;
+            width: 85%;
+            margin: 6px 0px;
 
             .form {
                 justify-content: center;
                 display: flex;
-                width: 100%;
+                height: 100%;
                 margin-top: 5px;
 
-                .textbox {
-                    width: 85%;
-                    margin: 5.5px auto;
+                form {
                     display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    font-family: 'Dongle';
                 }
 
-                .content {
-                    margin-top: 12.5px;
-                    border-radius: 12px;
+                .label-container {
+                    width: 100%;
+                    display: flex;
+                    align-content: center;
+                    line-height: 12px;
+
+                    .label {
+                        padding: 5px;
+                        text-transform: uppercase;
+                    }
+
+                    .label:nth-of-type(1) {
+                        margin-top: 4px;
+                    }
+                }
+
+                .textbox {
+                    width: 100%;
+                    display: flex;
+                    background-color: $pale-silver;
+                    outline: none;
+                    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px inset;
+                    border: none;
+                    padding: 10px;
+                    height: auto;
+                    border-radius: 6px;
+                    z-index: 100;
+                }
+
+                #title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 15px;
+                    line-height: 16px;
+                    font-family: 'Rubik';
+                    font-weight: bold;
+
+                }
+
+                #content {
+                    flex: 1;
+                    resize: none;
+                    font-family: 'Dongle';
+                    font-size: 21px;
+                    line-height: 20px;
                 }
 
                 .btn-container {
                     height: auto;
-                    width: 85%;
-                    margin: 0 auto;
-                    margin-top: 11.5px;
+                    width: 100%;
                     display: flex;
                     flex-flow: row-reverse;
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                    margin-top: 6px;
+
+                    button {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
 
                     .save-btn {
-                        line-height: 20px;
-                        border: 2px solid rgba(25, 118, 210, 0.5);
                         margin-right: 8px;
                     }
 
@@ -85,29 +138,25 @@
                         background-color: red;
                     }
                 }
-
-                form {
-                    width: 100%;
-                }
             }
         }
 
         .modal-bottom {
             width: 100%;
-            height: 50px;
+            height: 30px;
             display: flex;
-            font-size: 20px;
+            font-size: 16px;
             background-color: $pale-silver;
             font-family: 'Rubik';
             border-bottom-left-radius: 12px;
             border-bottom-right-radius: 12px;
 
             span {
-                font-size: 16px;
+                font-size: 12px;
             }
 
             svg {
-                margin-right: 5px;
+                margin-right: 3px;
             }
 
             .left-icons {
