@@ -38,7 +38,7 @@ function Blogs(props) {
     return (
         <div className='blogs'>
             <MobileMenu name={props.name}></MobileMenu>
-            {showModal && <CreateBlogModal getBlogs={getBlogs} setShowModal={setShowModal} name={props.name}></CreateBlogModal>}
+            <CreateBlogModal getBlogs={getBlogs} setShowModal={setShowModal} showModal={showModal} name={props.name}></CreateBlogModal>
             <div className='top'>
                 <div className='blog-cards'>
                     {displayBlogs()}

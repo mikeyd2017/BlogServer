@@ -13,8 +13,16 @@
         height: 100%;
         max-width: 1080px;
 
-        @media screen and (min-width: 1080px) {
+        @media screen and (min-width: 1081px) {
+            max-height: 98%;
+        }
+
+        @media screen and (min-width: 1921px) {
             max-height: 1100px;
         }
+    }
+
+    .show {
+        visibility: visible;
     }
 }

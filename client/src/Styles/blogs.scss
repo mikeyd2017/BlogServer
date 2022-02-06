@@ -15,6 +15,10 @@
         width: 100%;
         overflow: scroll;
 
+        @media screen and (min-width: 1080px) {
+            min-width: 1080px;
+        }
+
         &::-webkit-scrollbar {
             width: 0px;
             height: 0px;
@@ -25,9 +29,12 @@
             padding-top: 12px;
             justify-content: space-around;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
             column-gap: 10px;
             row-gap: 10px;
+
+            @media screen and (min-width: 768px) {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
         }
     }
 
@@ -83,7 +90,7 @@
 
             svg {
                 margin: 0px 2.5px;
-                font-size: 22px;
+                font-size: 20px;
             }
         }
 
