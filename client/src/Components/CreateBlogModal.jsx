@@ -26,6 +26,13 @@ function CreateBlogModal(props) {
         }
     });
 
+    function resetForm() {
+        setTitle('');
+        setContent('');
+        $('#title').empty();
+        $('#content').val("");
+    }
+
     const submitBlog = () => {
         setSaving(true);
 
@@ -43,6 +50,7 @@ function CreateBlogModal(props) {
             setBlogAdded(true);
             props.getBlogs();
             props.setShowModal(false);
+            resetForm();
         });
     }
 
@@ -63,7 +71,7 @@ function CreateBlogModal(props) {
                                 <div className='label-container'><span className='label'>Content</span></div>
                                 <textarea className='textbox' id='content' onChange={(e) => setContent(e.target.value)} label='Content'></textarea>
                                 <div className='btn-container'>
-                                    <Button className='cancel-btn' onClick={() => props.setShowModal(false)} variant='contained'>Cancel</Button>
+                                    <Button className='cancel-btn' onClick={() => { props.setShowModal(false); resetForm(); }} variant='contained'>Cancel</Button>
                                     <LoadingButton className='save-btn' loading={isSaving} variant='contained' onClick={() => submitBlog()}>Done</LoadingButton>
                                 </div>
                             </form>

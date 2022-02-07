@@ -4,12 +4,18 @@ import Blogs from './Blogs';
 
 import '../Styles/main.scss';
 import USER from '../utilities/User';
+import $ from 'jquery';
 
 function Main() {
     const [userState, setUserState] = useState({
         name: '',
         age: '',
         email: ''
+    });
+
+    $(function () {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
     useEffect(() => {

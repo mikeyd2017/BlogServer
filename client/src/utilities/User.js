@@ -4,7 +4,7 @@ import { devKeys } from '../keys/dev';
 const USER = {
     getUser: async (userID) => {
         try {
-            return await axios.get(`${devKeys.devAPI}/user/${userID}`).then((response) => response.data);
+            return await axios.get(`${devKeys.api}/user/${userID}`).then((response) => response.data);
         } catch(err) {
             console.log(err);
         }
@@ -12,7 +12,7 @@ const USER = {
 
     createUser: async (user) => {
         try {
-            return await axios.post(`${devKeys.devAPI}/user/createuser`, {
+            return await axios.post(`${devKeys.api}/user/createuser`, {
                 user: {
                     name: user.name,
                     age: user.age,

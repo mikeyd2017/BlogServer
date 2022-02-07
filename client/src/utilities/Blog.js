@@ -4,7 +4,7 @@ import {devKeys} from '../keys/dev';
 const BLOG = {
     addBlog: async (blog) => {
         try {
-            return await axios.post(`${devKeys.devAPI}/blog/create`, {
+            return await axios.post(`${devKeys.api}/blog/create`, {
                 blog: {
                     owner: blog.owner,
                     title: blog.title,
@@ -20,7 +20,7 @@ const BLOG = {
 
     getBlogs: async () => {
         try {
-            return await axios.get(`${devKeys.devAPI}/blog/all`, {}).then((response) => response.data);
+            return await axios.get(`${devKeys.api}/blog/all`, {}).then((response) => response.data);
         } catch (err) {
             console.log(err);
         }
