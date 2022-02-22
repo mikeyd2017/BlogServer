@@ -2,7 +2,6 @@
 
 .blogs {
     box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    background-color: $white;
     align-items: center;
     position: relative;
 
@@ -14,6 +13,9 @@
         height: calc(100% - 85px);
         width: 100%;
         overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         @media screen and (min-width: 1080px) {
             min-width: 1080px;
@@ -27,14 +29,14 @@
         .blog-cards {
             padding: 15px;
             padding-top: 12px;
-            justify-content: space-around;
             display: grid;
             column-gap: 10px;
             row-gap: 10px;
+            max-width: 750px;
 
-            @media screen and (min-width: 768px) {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            }
+            // @media screen and (min-width: 768px) {
+            //     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            // }
         }
     }
 
@@ -44,9 +46,13 @@
         display: flex;
         align-items: center;
         box-shadow: rgba(0 0 0 / 15%) 0px -3px 11px -2px;
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
         position: relative;
+        background-color: $white;
+
+        @media screen and (min-width: 768px) {
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
 
         svg {
             color: $jet;

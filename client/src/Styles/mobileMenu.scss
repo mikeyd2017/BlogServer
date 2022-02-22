@@ -6,6 +6,7 @@
     height: 35px;
     width: 100%;
     color: $jet;
+    background-color: $white;
 
     .mobile-icons-left {
         display: flex;
@@ -16,8 +17,8 @@
         .user-info {
             text-align: center;
             font-family: 'Rubik';
-            font-size: 12px;
-            line-height: 12px;
+            font-size: 13px;
+            line-height: 13px;
             color: $jet;
             display: flex;
             align-items: center;
@@ -25,7 +26,11 @@
             cursor: pointer;
 
             span {
-                margin-left: 4px;
+                margin-right: 3px;
+            }
+
+            svg {
+                font-size: 14px;
             }
 
             img {
@@ -33,6 +38,7 @@
                 height: 22.5px;
                 border-radius: 50%;
                 object-fit: cover;
+                margin-right: 4px;
             }
         }
 
@@ -43,29 +49,29 @@
         flex-basis: 50%;
         align-items: center;
         justify-content: flex-end;
-        font-size: 24px;
+        font-size: 20px;
         margin-right: 10px;
 
         div {
             cursor: pointer;
             display: flex;
             align-items: center;
+            color: $jet;
 
             span {
-                display: none;
-
-                @media screen and (min-width: 550px) {
-                    font-family: 'Rubik';
-                    font-size: 12px;
-                    line-height: 12px;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    display: inline-block;
-                }
+                font-family: 'Exo';
+                font-size: 16px;
+                line-height: 16px;
+                font-weight: 800;
+                display: inline-block;
+                margin-left: 5px;
+                padding-left: 5px;
+                border-left: 1px solid $jet;
             }
 
             svg {
-                margin-left: 3px;
+                margin-left: 5px;
+                margin-top: -2px;
             }
         }
     }
