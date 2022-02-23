@@ -21,11 +21,15 @@
         font-size: 15px;
         line-height: 17px;
         overflow: hidden;
-        margin-bottom: 30px;
+        margin-bottom: 7px;
 
         @media screen and (min-width: 1080px) {
             font-size: 16px;
             line-height: 18px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 30px;
         }
 
         .title {
@@ -56,21 +60,27 @@
 
     .card-bottom {
         height: auto;
-        width: 100%;
-        background-color: $pale-silver;
+        width: 200px;
+        background: linear-gradient(120deg, rgb(0, 0, 0, 0%) 0% 10%, $pale-silver 11% 90%, rgb(0, 0, 0, 0%) 91% 100%);
         position: absolute;
         padding: 4px 2px;
-        bottom: 0;
-        left: 0;
+        top: 0;
+        right: 10px;
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 768px) {
+            background: linear-gradient(250deg, rgb(0, 0, 0, 0%) 0% 10%, $pale-silver 11% 90%, rgb(0, 0, 0, 0%) 91% 100%);
+            bottom: 0;
+            top: auto;
+        }
 
         .card-right-icons {
             display: flex;
             justify-content: right;
             align-items: center;
             flex-basis: 50%;
-            margin-right: 5px;
+            margin-right: 27px;
             font-size: 13px;
 
             svg {
@@ -86,7 +96,7 @@
             .voting {
                 display: flex;
                 align-items: center;
-                margin-right: 2.5px;
+                margin-right: 7.5px;
 
                 svg:nth-of-type(1) {
                     margin-top: -1px;

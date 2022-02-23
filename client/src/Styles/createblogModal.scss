@@ -70,6 +70,7 @@
                 background-color: $pale-silver;
                 border-top-right-radius: 12px;
                 border-top-left-radius: 12px;
+                color: $white;
             }
 
             .modal-middle {
@@ -127,6 +128,7 @@
                         border-radius: 6px;
                         z-index: 100;
                         font-family: 'Nunito';
+                        color: $white;
                     }
 
                     #title {
@@ -177,6 +179,7 @@
                 font-family: 'Dongle';
                 border-bottom-left-radius: 12px;
                 border-bottom-right-radius: 12px;
+                color: $white;
 
                 span {
                     font-size: 20px;
