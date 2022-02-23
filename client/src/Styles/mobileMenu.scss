@@ -7,6 +7,8 @@
     width: 100%;
     color: $jet;
     background-color: $white;
+    //border fix (forced to fix because of background issues)
+    padding-bottom: 7px;
 
     .mobile-icons-left {
         display: flex;
