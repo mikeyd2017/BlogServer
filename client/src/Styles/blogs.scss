@@ -10,7 +10,7 @@
     }
 
     .top {
-        height: calc(100% - 85px);
+        height: calc(100% - 70px);
         width: 100%;
         overflow: scroll;
         display: flex;
@@ -41,7 +41,7 @@
     }
 
     .bottom {
-        height: 50px;
+        height: 35px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -112,9 +112,14 @@
             justify-content: center;
 
             .add-blog {
-                font-size: 33px;
+                font-size: 45px;
                 display: block;
                 cursor: pointer;
+                margin-top: -8px;
+                background: $white;
+                padding: 7px;
+                border-radius: 6px;
+                box-shadow: rgb(0 0 0 / 15%) 0px -6px 9px -7px;
             }
         }
 

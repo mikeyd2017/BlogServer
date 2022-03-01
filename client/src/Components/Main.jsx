@@ -19,7 +19,7 @@ function Main() {
     });
 
     useEffect(() => {
-        USER.getUser('61e0d941486e029487f69c72').then(data => {
+        USER.getUser('61e711cb9139f4b16c893b0b').then(data => {
             setUserState((userState) => ({
                 ...userState,
                 name: data.user.name,

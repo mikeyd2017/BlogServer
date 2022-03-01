@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import CreateBlogModal from './CreateBlogModal.jsx';
 import MobileMenu from './MobileMenu.jsx';
 import BlogCard from './BlogCard.jsx';
-import { FaPlusSquare, FaThList, FaTh, FaSearch, FaCog } from 'react-icons/fa';
+import { FaPlusSquare, FaSearch, FaCog } from 'react-icons/fa';
 
 import BLOG from '../utilities/Blog';
 
