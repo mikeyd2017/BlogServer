@@ -9,8 +9,6 @@ import '../Styles/blogCard.scss';
 
 function Blogs(props) {
 
-    const [showModal, setShowModal] = useState(false);
-
     const [blogs, setBlogs] = useState([]);
 
     const getBlogs = () => {
@@ -35,7 +33,7 @@ function Blogs(props) {
 
     return (
         <div className='blogs'>
-            <CreateBlogModal getBlogs={getBlogs} setShowModal={setShowModal} showModal={showModal} name={props.name}></CreateBlogModal>
+            <CreateBlogModal getBlogs={getBlogs} setShowModal={props.setShowModal} showModal={props.showModal} name={props.name}></CreateBlogModal>
             <div className='blog-cards'>
                 {displayBlogs()}
             </div>

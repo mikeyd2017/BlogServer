@@ -42,7 +42,7 @@ function Main() {
                 <div className='bg bg3'></div>
                 <div className='main-background'></div>
                 <div className='main-content'>
-                    <Blogs></Blogs>
+                    <Blogs showModal={showModal} setShowModal={setShowModal}></Blogs>
                 </div>
                 <div className='bottom'>
                     <div className='icons-left'>
