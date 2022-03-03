@@ -22,6 +22,8 @@
         width: 100%;
         position: relative;
         border: 6px solid $white;
+        border-top: none;
+        border-bottom: none;
         box-shadow: rgba(10, 37, 64, 0.35) 0px 0px 6px 0px;
         flex-direction: column;
 
@@ -60,7 +62,6 @@
         }
 
         .bottom {
-            height: 35px;
             width: 100%;
             display: flex;
             align-items: center;
@@ -68,7 +69,8 @@
             position: relative;
             background-color: $white;
             //for border fix below
-            padding-top: 7px;
+            padding-top: 1.75px;
+            padding-bottom: 1.75px;
             z-index: 10;
 
             svg {

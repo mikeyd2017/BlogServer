@@ -3,12 +3,11 @@
 .mobile-menu {
     display: flex;
     box-shadow: rgb(0 0 0 / 15%) 0px 4px 11px -5px;
-    height: 35px;
     width: 100%;
     color: $jet;
     background-color: $white;
-    //border fix (forced to fix because of background issues)
-    padding-bottom: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     z-index: 10;
     position: relative;
 
