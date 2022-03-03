@@ -16,7 +16,7 @@ function MobileMenu(props) {
             </div>
             <div className='mobile-icons-right'>
                 {/* <div><span>Apps</span><IoLayers></IoLayers></div> */}
-                <div><IoHome></IoHome><IoLayers></IoLayers><span>fsft.io</span></div>
+                <div><IoHome></IoHome><span>fsft.io</span></div>
             </div>
         </div>
     )

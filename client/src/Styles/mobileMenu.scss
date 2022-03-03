@@ -9,6 +9,8 @@
     background-color: $white;
     //border fix (forced to fix because of background issues)
     padding-bottom: 7px;
+    z-index: 10;
+    position: relative;
 
     .mobile-icons-left {
         display: flex;

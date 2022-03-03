@@ -50,6 +50,7 @@
         background-color: $white;
         //for border fix below
         padding-top: 7px;
+        z-index: 10;
 
         svg {
             color: $jet;
@@ -58,7 +59,6 @@
         div {
             display: flex;
             align-items: center;
-            margin-top: -1.5px;
         }
 
         .icons-left,
@@ -86,7 +86,6 @@
                     line-height: 12px;
                     text-transform: uppercase;
                     font-weight: bold;
-                    margin-top: 2px;
                     display: inline-block;
                 }
             }

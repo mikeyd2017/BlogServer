@@ -1,4 +1,11 @@
 @import './variables.scss';
+@import './animations.scss';
+
+@for $i from 1 to 10 {
+    .blog-card:nth-child(#{$i}) {
+        animation-delay: $i * 0.15s;
+    }
+}
 
 .blog-card {
     display: flex;
@@ -14,6 +21,9 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     position: relative;
     color: $white;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 
     .card-top {
         width: 100%;
