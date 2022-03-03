@@ -23,19 +23,22 @@
         position: relative;
         border: 6px solid $white;
         box-shadow: rgba(10, 37, 64, 0.35) 0px 0px 6px 0px;
+        flex-direction: column;
 
         @media screen and (max-width: 768px) {
             border-left: none;
             border-right: none;
         }
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 769px) {
             max-height: 98%;
+            max-width: 768px;
             border-radius: 6px;
         }
 
         @media screen and (min-width: 1921px) {
             max-height: 1100px;
+            max-width: 1920px;
         }
 
         .main-background {
@@ -48,112 +51,105 @@
         }
 
         .main-content {
-            .top {
-                height: calc(100% - 70px);
-                width: 100%;
-                overflow: scroll;
+            width: 100%;
+            overflow: scroll;
 
-                @media screen and (min-width: 1080px) {
-                    min-width: 1080px;
+            &::-webkit-scrollbar {
+                width: 0px;
+                height: 0px;
+            }
+        }
+
+        .bottom {
+            height: 35px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            box-shadow: rgba(0 0 0 / 15%) 0px -3px 11px -2px;
+            position: relative;
+            background-color: $white;
+            //for border fix below
+            padding-top: 7px;
+            z-index: 10;
+
+            svg {
+                color: $jet;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+            }
+
+            .icons-left,
+            .icons-right {
+                div {
+                    padding: 6.5px;
+                    padding-top: 7.5px;
+                    padding-bottom: 7.5px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    margin-right: 2.5px;
+
+                    &:hover {
+                        background-color: $light-gray;
+                        box-shadow: rgb(50 50 93 / 25%) 0px 0px 4px 1px inset;
+                    }
                 }
 
-                &::-webkit-scrollbar {
-                    width: 0px;
-                    height: 0px;
+                span {
+                    display: none;
+
+                    @media screen and (min-width: 550px) {
+                        font-family: 'Rubik';
+                        font-size: 12px;
+                        line-height: 12px;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        display: inline-block;
+                    }
+                }
+
+                svg {
+                    margin: 0px 2.5px;
+                    font-size: 20px;
                 }
             }
 
-            .bottom {
-                height: 35px;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                box-shadow: rgba(0 0 0 / 15%) 0px -3px 11px -2px;
-                position: relative;
-                background-color: $white;
-                //for border fix below
-                padding-top: 7px;
-                z-index: 10;
+            .icons-left {
+                flex-basis: 45%;
+                padding-left: 14px;
 
-                svg {
-                    color: $jet;
+                span {
+                    margin-left: 3px;
+                    padding-right: 6px;
                 }
+            }
 
-                div {
-                    display: flex;
-                    align-items: center;
+            .icons-middle {
+                flex-basis: 10%;
+                justify-content: center;
+
+                .add-blog {
+                    font-size: 45px;
+                    display: block;
+                    cursor: pointer;
+                    margin-top: -8px;
+                    background: $white;
+                    padding: 7px;
+                    border-radius: 6px;
+                    box-shadow: rgb(0 0 0 / 15%) 0px -6px 9px -7px;
                 }
+            }
 
-                .icons-left,
-                .icons-right {
-                    div {
-                        padding: 6.5px;
-                        padding-top: 7.5px;
-                        padding-bottom: 7.5px;
-                        border-radius: 4px;
-                        cursor: pointer;
-                        margin-right: 2.5px;
+            .icons-right {
+                flex-basis: 45%;
+                justify-content: flex-end;
+                padding-right: 12px;
 
-                        &:hover {
-                            background-color: $light-gray;
-                            box-shadow: rgb(50 50 93 / 25%) 0px 0px 4px 1px inset;
-                        }
-                    }
-
-                    span {
-                        display: none;
-
-                        @media screen and (min-width: 550px) {
-                            font-family: 'Rubik';
-                            font-size: 12px;
-                            line-height: 12px;
-                            text-transform: uppercase;
-                            font-weight: bold;
-                            display: inline-block;
-                        }
-                    }
-
-                    svg {
-                        margin: 0px 2.5px;
-                        font-size: 20px;
-                    }
-                }
-
-                .icons-left {
-                    flex-basis: 45%;
-                    padding-left: 14px;
-
-                    span {
-                        margin-left: 3px;
-                        padding-right: 6px;
-                    }
-                }
-
-                .icons-middle {
-                    flex-basis: 10%;
-                    justify-content: center;
-
-                    .add-blog {
-                        font-size: 45px;
-                        display: block;
-                        cursor: pointer;
-                        margin-top: -8px;
-                        background: $white;
-                        padding: 7px;
-                        border-radius: 6px;
-                        box-shadow: rgb(0 0 0 / 15%) 0px -6px 9px -7px;
-                    }
-                }
-
-                .icons-right {
-                    flex-basis: 45%;
-                    justify-content: flex-end;
-                    padding-right: 12px;
-
-                    span {
-                        margin-right: 3px;
-                        padding-left: 7px;
-                    }
+                span {
+                    margin-right: 3px;
+                    padding-left: 7px;
                 }
             }
         }

@@ -36,28 +36,26 @@ function Main() {
     return (
         <div className='main-container'>
             <div className='main'>
+                <MobileMenu name={userState.name}></MobileMenu>
                 <div className='bg'></div>
                 <div className='bg bg2'></div>
                 <div className='bg bg3'></div>
                 <div className='main-background'></div>
                 <div className='main-content'>
-                    <MobileMenu name={userState.name}></MobileMenu>
-                    <div className='top'>
-                        <Blogs></Blogs>
+                    <Blogs></Blogs>
+                </div>
+                <div className='bottom'>
+                    <div className='icons-left'>
+                        <div className='search-icon'>
+                            <FaSearch></FaSearch><span>Search</span>
+                        </div>
                     </div>
-                    <div className='bottom'>
-                        <div className='icons-left'>
-                            <div className='search-icon'>
-                                <FaSearch></FaSearch><span>Search</span>
-                            </div>
-                        </div>
-                        <div className='icons-middle'>
-                            <FaPlusSquare className='add-blog' onClick={() => setShowModal(!showModal)}></FaPlusSquare>
-                        </div>
-                        <div className='icons-right'>
-                            <div className='settings-icon'>
-                                <span>Settings</span><FaCog></FaCog>
-                            </div>
+                    <div className='icons-middle'>
+                        <FaPlusSquare className='add-blog' onClick={() => setShowModal(!showModal)}></FaPlusSquare>
+                    </div>
+                    <div className='icons-right'>
+                        <div className='settings-icon'>
+                            <span>Settings</span><FaCog></FaCog>
                         </div>
                     </div>
                 </div>
