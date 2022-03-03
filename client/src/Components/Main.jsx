@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { FaPlusSquare, FaSearch, FaCog } from 'react-icons/fa';
+import MobileMenu from './MobileMenu.jsx';
 
 import Blogs from './Blogs';
 
@@ -18,6 +20,8 @@ function Main() {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
+    const [showModal, setShowModal] = useState(false);
+
     useEffect(() => {
         USER.getUser('61e711cb9139f4b16c893b0b').then(data => {
             setUserState((userState) => ({
@@ -36,7 +40,27 @@ function Main() {
                 <div className='bg bg2'></div>
                 <div className='bg bg3'></div>
                 <div className='main-background'></div>
-                <Blogs name={userState.name}></Blogs>
+                <div className='main-content'>
+                    <MobileMenu name={userState.name}></MobileMenu>
+                    <div className='top'>
+                        <Blogs></Blogs>
+                    </div>
+                    <div className='bottom'>
+                        <div className='icons-left'>
+                            <div className='search-icon'>
+                                <FaSearch></FaSearch><span>Search</span>
+                            </div>
+                        </div>
+                        <div className='icons-middle'>
+                            <FaPlusSquare className='add-blog' onClick={() => setShowModal(!showModal)}></FaPlusSquare>
+                        </div>
+                        <div className='icons-right'>
+                            <div className='settings-icon'>
+                                <span>Settings</span><FaCog></FaCog>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
