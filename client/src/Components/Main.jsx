@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaPlusSquare, FaSearch, FaCog } from 'react-icons/fa';
-import MobileMenu from './MobileMenu.jsx';
+import Menu from './Menu.jsx';
 
 import Blogs from './Blogs';
 
@@ -23,7 +23,7 @@ function Main() {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        USER.getUser('61e711cb9139f4b16c893b0b').then(data => {
+        USER.getUser('61e0d941486e029487f69c72').then(data => {
             setUserState((userState) => ({
                 ...userState,
                 name: data.user.name,
@@ -36,11 +36,11 @@ function Main() {
     return (
         <div className='main-container'>
             <div className='main'>
-                <MobileMenu name={userState.name}></MobileMenu>
                 <div className='bg'></div>
                 <div className='bg bg2'></div>
                 <div className='bg bg3'></div>
                 <div className='main-background'></div>
+                <Menu name={userState.name}></Menu>
                 <div className='main-content'>
                     <Blogs showModal={showModal} setShowModal={setShowModal}></Blogs>
                 </div>

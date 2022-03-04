@@ -56,8 +56,6 @@ function CreateBlogModal(props) {
 
     return (
         <div className={props.showModal ? 'createblog show' : 'createblog'}>
-            <div className={props.showModal ? 'background blur' : 'background'}>
-            </div>
             <div className='modal-animation-container'>
                 <div className={props.showModal ? 'modal modal-animation-up' : 'modal'}>
                     <div className='modal-top'>
@@ -84,6 +82,7 @@ function CreateBlogModal(props) {
                     </div>
                 </div>
             </div>
+            <div className={props.showModal ? 'blur-cover fade-in' : 'blur-cover'}></div>
         </div >
     )
 }
