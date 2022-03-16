@@ -9,6 +9,7 @@ function BlogCard(props) {
     return (
         <div className='blog-card'>
             <div className='card-top'>
+                <div className='card-fade'></div>
                 <h3 className='title'>{props.blog.title}</h3>
                 <p className='content'>{props.blog.content}</p>
             </div>
@@ -28,8 +29,6 @@ function BlogCard(props) {
                         <span>129</span>
                     </div>
                 </div>
-                {/* <div className='owner'><IoPersonCircleSharp></IoPersonCircleSharp><span>{props.blog.owner}</span></div>
-                <div className='date-posted'><IoCalendarSharp></IoCalendarSharp><span>{props.blog.datePosted.substring(0, 10)}</span></div> */}
             </div>
         </div>
     )

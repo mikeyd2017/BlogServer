@@ -36,9 +36,6 @@ function Main() {
     return (
         <div className='main-container'>
             <div className='main'>
-                <div className='bg'></div>
-                <div className='bg bg2'></div>
-                <div className='bg bg3'></div>
                 <div className='main-background'></div>
                 <Menu name={userState.name}></Menu>
                 <div className='main-content'>
